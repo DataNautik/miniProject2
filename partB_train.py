@@ -124,12 +124,25 @@ def fit_ensemble_vae(
     }
 
     if resume_checkpoint is not None and resume_checkpoint.exists():
-        payload = torch.load(resume_checkpoint, map_location=device)
-        model.load_state_dict(payload["model_state"])
-        optimizer.load_state_dict(payload["optimizer_state"])
-        history = payload["history"]
-        start_epoch = int(payload["epoch"]) + 1
-        print(f"Resumed from epoch {start_epoch} using checkpoint: {resume_checkpoint}")
+     start_epoch = 0
+     best_eval_loss = float("inf")
+     history = []
+
+     if resume_checkpoint is not None and Path(resume_checkpoint).exists():
+        try:
+            payload = torch.load(resume_checkpoint, map_location=device)
+            model.load_state_dict(payload["model_state"])
+            optimizer.load_state_dict(payload["optimizer_state"])
+            start_epoch = int(payload.get("epoch", 0))
+            best_eval_loss = float(payload.get("best_eval_loss", float("inf")))
+            history = payload.get("history", [])
+            print(f"Resumed from checkpoint: {resume_checkpoint} at epoch {start_epoch}")
+        except Exception as e:
+            print(f"Warning: failed to load checkpoint {resume_checkpoint}: {e}")
+            print("Ignoring corrupted checkpoint and restarting this run from scratch.")
+            start_epoch = 0
+            best_eval_loss = float("inf")
+            history = []
 
     for epoch in range(start_epoch, train_config.epochs):
         train_metrics = run_epoch(
