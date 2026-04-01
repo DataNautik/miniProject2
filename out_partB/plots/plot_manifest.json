@@ -1,0 +1,6 @@
+{
+  "cov_plot": "out_partB/plots/cov_vs_num_decoders.png",
+  "k_1": "out_partB/plots/latent_scatter_geodesics_k1.png",
+  "k_2": "out_partB/plots/latent_scatter_geodesics_k2.png",
+  "k_3": "out_partB/plots/latent_scatter_geodesics_k3.png"
+}

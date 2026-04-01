@@ -1,0 +1,26 @@
+{
+  "mode": "full",
+  "num_decoders_list": [
+    1,
+    2,
+    3
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "batch_size": 128,
+  "num_observations": 2048,
+  "selected_pairs_path": "partA_outputs/selected_pairs.json",
+  "qualitative_pairs_path": "partA_outputs/partA_qualitative_latent_pairs.npz",
+  "num_pairs": 25,
+  "device": "cuda"
+}

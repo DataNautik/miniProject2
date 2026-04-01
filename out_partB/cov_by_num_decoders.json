@@ -1,0 +1,14 @@
+{
+  "1": {
+    "euclidean_cov_global_mean": 0.4777399003505707,
+    "geodesic_cov_global_mean": 0.5219964248756019
+  },
+  "2": {
+    "euclidean_cov_global_mean": 0.48163291811943054,
+    "geodesic_cov_global_mean": 0.24681334095132748
+  },
+  "3": {
+    "euclidean_cov_global_mean": 0.13181808590888977,
+    "geodesic_cov_global_mean": 0.06990027455116743
+  }
+}

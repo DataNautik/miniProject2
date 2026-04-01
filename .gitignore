@@ -1,19 +1,9 @@
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+
 .DS_Store
 
-partA_outputs/
-out_partB/
+
 out_partB_smoke/
 data/
 
-*.pt
-*.pth
-*.npz
-*.npy
-*.csv
-*.png
-*.jpg
-*.jpeg
+
