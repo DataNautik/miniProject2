@@ -1,0 +1,110 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[colorlinks]{hyperref}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+
+\usepackage[round]{natbib}
+\bibliographystyle{abbrvnat}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[L]{02460-2026 Mini-project 2}
+\fancyhead[R]{s039894, s271828 \& s314159}
+
+% For including code
+% From https://www.overleaf.com/learn/latex/Code_listing
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    upquote=true
+}
+
+\lstset{language=Python, style=mystyle}
+
+\usepackage{lipsum}
+
+\begin{document}
+
+%%% Main text part %%%
+
+\section*{Mini-project 2 in Advanced Machine Learning (02460)}
+by Alice (s039894), Bob (s271828) \& Carlo (s314159) on 3 April 2025
+
+\begin{multicols}{2}
+    \subsection*{Part A: pullback geodesics}
+    \lipsum[1] We show some plots in figure~\ref{fig:geodesics}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.49\linewidth]{geodesics.pdf}
+        \includegraphics[width=0.49\linewidth]{geodesics.pdf}
+        \caption{Geodesics between randomly sampled latent variables. The left panel shows results using a standard VAE, while the right panel shows an ensemble decoder VAE with 3 ensemble members.}
+        \label{fig:geodesics}
+    \end{figure}
+    \lipsum[2]
+
+    \subsection*{Part B: Ensemble VAE geometry}
+    \lipsum[1]
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\linewidth]{cov.pdf}
+        \caption{The coefficient of variation across multiple training runs for different number of decoders.}
+        \label{fig:plot}
+    \end{figure}
+
+    \lipsum[1]
+\end{multicols}
+
+\newpage
+
+%%% Code snippet part %%%
+
+\section*{Code snippets}
+The following beautiful code snippet prints \lstinline{"Hello world"} 10 times:
+\begin{lstlisting}
+for i in range(10):
+    print("Hello world")
+\end{lstlisting}
+
+Here is a more advanced code example that prints \lstinline{"Hello world"} 100 times:
+\begin{lstlisting}
+for i in range(100):
+    print("Hello world")
+\end{lstlisting}
+
+\newpage
+
+%%% Bibliography %%%
+
+\bibliography{template}
+
+\end{document}

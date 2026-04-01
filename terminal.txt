@@ -1,0 +1,122 @@
+[Part A] Training a new Gaussian VAE...
+Part A training setup
+Classes: [0, 1, 2]
+Device: mps
+Epochs: 100
+Decoder sigma mode: fixed
+Train size: 1638
+Validation size: 410
+Epoch 001/100 | train_loss=2580.2733 | val_loss=1808.1022 | train_elbo=-2580.2733 | val_elbo=-1808.1022                    
+Epoch 002/100 | train_loss=1521.3276 | val_loss=1484.5244 | train_elbo=-1521.3276 | val_elbo=-1484.5244                    
+Epoch 003/100 | train_loss=1261.2807 | val_loss=1212.1325 | train_elbo=-1261.2807 | val_elbo=-1212.1325                    
+Epoch 004/100 | train_loss=987.5153 | val_loss=968.7529 | train_elbo=-987.5153 | val_elbo=-968.7529                        
+Epoch 005/100 | train_loss=814.1328 | val_loss=810.3143 | train_elbo=-814.1328 | val_elbo=-810.3143                        
+Epoch 006/100 | train_loss=697.7486 | val_loss=722.5040 | train_elbo=-697.7486 | val_elbo=-722.5040                        
+Epoch 007/100 | train_loss=615.2246 | val_loss=645.9055 | train_elbo=-615.2246 | val_elbo=-645.9055                        
+Epoch 008/100 | train_loss=542.6452 | val_loss=588.5583 | train_elbo=-542.6452 | val_elbo=-588.5583                        
+Epoch 009/100 | train_loss=492.0111 | val_loss=543.7579 | train_elbo=-492.0111 | val_elbo=-543.7579                        
+Epoch 010/100 | train_loss=456.9386 | val_loss=511.1044 | train_elbo=-456.9386 | val_elbo=-511.1044                        
+Epoch 011/100 | train_loss=431.0237 | val_loss=493.3300 | train_elbo=-431.0237 | val_elbo=-493.3300                        
+Epoch 012/100 | train_loss=409.8851 | val_loss=467.5440 | train_elbo=-409.8851 | val_elbo=-467.5440                        
+Epoch 013/100 | train_loss=393.3117 | val_loss=449.2626 | train_elbo=-393.3117 | val_elbo=-449.2626                        
+Epoch 014/100 | train_loss=375.7645 | val_loss=434.9383 | train_elbo=-375.7645 | val_elbo=-434.9383                        
+Epoch 015/100 | train_loss=362.9564 | val_loss=431.5252 | train_elbo=-362.9564 | val_elbo=-431.5252                        
+Epoch 016/100 | train_loss=350.9737 | val_loss=419.6913 | train_elbo=-350.9737 | val_elbo=-419.6913                        
+Epoch 017/100 | train_loss=342.1491 | val_loss=417.6974 | train_elbo=-342.1491 | val_elbo=-417.6974                        
+Epoch 018/100 | train_loss=334.1375 | val_loss=407.7395 | train_elbo=-334.1375 | val_elbo=-407.7395                        
+Epoch 019/100 | train_loss=322.2622 | val_loss=403.4482 | train_elbo=-322.2622 | val_elbo=-403.4482                        
+Epoch 020/100 | train_loss=314.7183 | val_loss=394.3737 | train_elbo=-314.7183 | val_elbo=-394.3737                        
+Epoch 021/100 | train_loss=305.1973 | val_loss=396.7853 | train_elbo=-305.1973 | val_elbo=-396.7853                        
+Epoch 022/100 | train_loss=300.4545 | val_loss=393.1174 | train_elbo=-300.4545 | val_elbo=-393.1174                        
+Epoch 023/100 | train_loss=291.9551 | val_loss=387.7116 | train_elbo=-291.9551 | val_elbo=-387.7116                        
+Epoch 024/100 | train_loss=285.8670 | val_loss=383.0902 | train_elbo=-285.8670 | val_elbo=-383.0902                        
+Epoch 025/100 | train_loss=282.5238 | val_loss=380.7223 | train_elbo=-282.5238 | val_elbo=-380.7223                        
+Epoch 026/100 | train_loss=276.5145 | val_loss=381.6230 | train_elbo=-276.5145 | val_elbo=-381.6230                        
+Epoch 027/100 | train_loss=266.8393 | val_loss=361.0522 | train_elbo=-266.8393 | val_elbo=-361.0522                        
+Epoch 028/100 | train_loss=258.3272 | val_loss=366.0550 | train_elbo=-258.3272 | val_elbo=-366.0550                        
+Epoch 029/100 | train_loss=252.0119 | val_loss=358.9695 | train_elbo=-252.0119 | val_elbo=-358.9695                        
+Epoch 030/100 | train_loss=247.9245 | val_loss=353.4605 | train_elbo=-247.9245 | val_elbo=-353.4605                        
+Epoch 031/100 | train_loss=240.3938 | val_loss=353.1418 | train_elbo=-240.3938 | val_elbo=-353.1418                        
+Epoch 032/100 | train_loss=235.6551 | val_loss=353.3193 | train_elbo=-235.6551 | val_elbo=-353.3193                        
+Epoch 033/100 | train_loss=230.0976 | val_loss=347.7286 | train_elbo=-230.0976 | val_elbo=-347.7286                        
+Epoch 034/100 | train_loss=227.6349 | val_loss=353.4114 | train_elbo=-227.6349 | val_elbo=-353.4114                        
+Epoch 035/100 | train_loss=225.8224 | val_loss=354.4628 | train_elbo=-225.8224 | val_elbo=-354.4628                        
+Epoch 036/100 | train_loss=218.4681 | val_loss=345.2742 | train_elbo=-218.4681 | val_elbo=-345.2742                        
+Epoch 037/100 | train_loss=214.0944 | val_loss=347.1769 | train_elbo=-214.0944 | val_elbo=-347.1769                        
+Epoch 038/100 | train_loss=213.9252 | val_loss=335.5572 | train_elbo=-213.9252 | val_elbo=-335.5572                        
+Epoch 039/100 | train_loss=206.1571 | val_loss=333.7677 | train_elbo=-206.1571 | val_elbo=-333.7677                        
+Epoch 040/100 | train_loss=201.5533 | val_loss=333.2198 | train_elbo=-201.5533 | val_elbo=-333.2198                        
+Epoch 041/100 | train_loss=194.8419 | val_loss=334.2244 | train_elbo=-194.8419 | val_elbo=-334.2244                        
+Epoch 042/100 | train_loss=194.5442 | val_loss=337.1926 | train_elbo=-194.5442 | val_elbo=-337.1926                        
+Epoch 043/100 | train_loss=193.1258 | val_loss=328.3596 | train_elbo=-193.1258 | val_elbo=-328.3596                        
+Epoch 044/100 | train_loss=187.1414 | val_loss=333.4973 | train_elbo=-187.1414 | val_elbo=-333.4973                        
+Epoch 045/100 | train_loss=184.2208 | val_loss=325.6987 | train_elbo=-184.2208 | val_elbo=-325.6987                        
+Epoch 046/100 | train_loss=178.5215 | val_loss=321.6529 | train_elbo=-178.5215 | val_elbo=-321.6529                        
+Epoch 047/100 | train_loss=182.2235 | val_loss=332.9413 | train_elbo=-182.2235 | val_elbo=-332.9413                        
+Epoch 048/100 | train_loss=177.2428 | val_loss=319.1473 | train_elbo=-177.2428 | val_elbo=-319.1473                        
+Epoch 049/100 | train_loss=170.6263 | val_loss=319.7698 | train_elbo=-170.6263 | val_elbo=-319.7698                        
+Epoch 050/100 | train_loss=166.2323 | val_loss=320.9512 | train_elbo=-166.2323 | val_elbo=-320.9512                        
+Epoch 051/100 | train_loss=165.1146 | val_loss=322.9278 | train_elbo=-165.1146 | val_elbo=-322.9278                        
+Epoch 052/100 | train_loss=161.3317 | val_loss=335.2951 | train_elbo=-161.3317 | val_elbo=-335.2951                        
+Epoch 053/100 | train_loss=161.9108 | val_loss=320.6636 | train_elbo=-161.9108 | val_elbo=-320.6636                        
+Epoch 054/100 | train_loss=161.2045 | val_loss=319.3245 | train_elbo=-161.2045 | val_elbo=-319.3245                        
+Epoch 055/100 | train_loss=155.3665 | val_loss=321.1392 | train_elbo=-155.3665 | val_elbo=-321.1392                        
+Epoch 056/100 | train_loss=155.3037 | val_loss=314.9043 | train_elbo=-155.3037 | val_elbo=-314.9043                        
+Epoch 057/100 | train_loss=148.9477 | val_loss=323.2700 | train_elbo=-148.9477 | val_elbo=-323.2700                        
+Epoch 058/100 | train_loss=149.1441 | val_loss=307.8653 | train_elbo=-149.1441 | val_elbo=-307.8653                        
+Epoch 059/100 | train_loss=143.7168 | val_loss=314.5108 | train_elbo=-143.7168 | val_elbo=-314.5108                        
+Epoch 060/100 | train_loss=140.1904 | val_loss=313.5162 | train_elbo=-140.1904 | val_elbo=-313.5162                        
+Epoch 061/100 | train_loss=138.3175 | val_loss=318.3815 | train_elbo=-138.3175 | val_elbo=-318.3815                        
+Epoch 062/100 | train_loss=134.1830 | val_loss=313.2197 | train_elbo=-134.1830 | val_elbo=-313.2197                        
+Epoch 063/100 | train_loss=133.2570 | val_loss=307.3732 | train_elbo=-133.2570 | val_elbo=-307.3732                        
+Epoch 064/100 | train_loss=127.3948 | val_loss=317.9125 | train_elbo=-127.3948 | val_elbo=-317.9125                        
+Epoch 065/100 | train_loss=129.2665 | val_loss=303.8208 | train_elbo=-129.2665 | val_elbo=-303.8208                        
+Epoch 066/100 | train_loss=123.7474 | val_loss=306.9217 | train_elbo=-123.7474 | val_elbo=-306.9217                        
+Epoch 067/100 | train_loss=121.2693 | val_loss=308.6260 | train_elbo=-121.2693 | val_elbo=-308.6260                        
+Epoch 068/100 | train_loss=121.9527 | val_loss=308.1056 | train_elbo=-121.9527 | val_elbo=-308.1056                        
+Epoch 069/100 | train_loss=116.6386 | val_loss=297.4396 | train_elbo=-116.6386 | val_elbo=-297.4396                        
+Epoch 070/100 | train_loss=113.8459 | val_loss=310.0816 | train_elbo=-113.8459 | val_elbo=-310.0816                        
+Epoch 071/100 | train_loss=113.9487 | val_loss=301.3839 | train_elbo=-113.9487 | val_elbo=-301.3839                        
+Epoch 072/100 | train_loss=108.3221 | val_loss=296.3597 | train_elbo=-108.3221 | val_elbo=-296.3597                        
+Epoch 073/100 | train_loss=102.9137 | val_loss=299.8137 | train_elbo=-102.9137 | val_elbo=-299.8137                        
+Epoch 074/100 | train_loss=100.3142 | val_loss=300.0608 | train_elbo=-100.3142 | val_elbo=-300.0608                        
+Epoch 075/100 | train_loss=99.3411 | val_loss=302.2261 | train_elbo=-99.3411 | val_elbo=-302.2261                          
+Epoch 076/100 | train_loss=98.2281 | val_loss=307.1476 | train_elbo=-98.2281 | val_elbo=-307.1476                          
+Epoch 077/100 | train_loss=99.5659 | val_loss=307.5325 | train_elbo=-99.5659 | val_elbo=-307.5325                          
+Epoch 078/100 | train_loss=96.7998 | val_loss=290.7306 | train_elbo=-96.7998 | val_elbo=-290.7306                          
+Epoch 079/100 | train_loss=95.7752 | val_loss=297.3020 | train_elbo=-95.7752 | val_elbo=-297.3020                          
+Epoch 080/100 | train_loss=92.6474 | val_loss=300.6422 | train_elbo=-92.6474 | val_elbo=-300.6422                          
+Epoch 081/100 | train_loss=88.4721 | val_loss=288.8159 | train_elbo=-88.4721 | val_elbo=-288.8159                          
+Epoch 082/100 | train_loss=84.9481 | val_loss=291.7214 | train_elbo=-84.9481 | val_elbo=-291.7214                          
+Epoch 083/100 | train_loss=83.4553 | val_loss=292.3842 | train_elbo=-83.4553 | val_elbo=-292.3842                          
+Epoch 084/100 | train_loss=81.2172 | val_loss=298.3109 | train_elbo=-81.2172 | val_elbo=-298.3109                          
+Epoch 085/100 | train_loss=80.8916 | val_loss=290.7503 | train_elbo=-80.8916 | val_elbo=-290.7503                          
+Epoch 086/100 | train_loss=79.2897 | val_loss=298.1135 | train_elbo=-79.2897 | val_elbo=-298.1135                          
+Epoch 087/100 | train_loss=80.1136 | val_loss=289.6365 | train_elbo=-80.1136 | val_elbo=-289.6365                          
+Epoch 088/100 | train_loss=76.0282 | val_loss=296.1598 | train_elbo=-76.0282 | val_elbo=-296.1598                          
+Epoch 089/100 | train_loss=76.0217 | val_loss=309.5972 | train_elbo=-76.0217 | val_elbo=-309.5972                          
+Epoch 090/100 | train_loss=80.3532 | val_loss=295.7014 | train_elbo=-80.3532 | val_elbo=-295.7014                          
+Epoch 091/100 | train_loss=77.7591 | val_loss=293.7720 | train_elbo=-77.7591 | val_elbo=-293.7720                          
+Epoch 092/100 | train_loss=71.3105 | val_loss=293.8140 | train_elbo=-71.3105 | val_elbo=-293.8140                          
+Epoch 093/100 | train_loss=68.0398 | val_loss=288.4499 | train_elbo=-68.0398 | val_elbo=-288.4499                          
+Epoch 094/100 | train_loss=61.8120 | val_loss=298.5991 | train_elbo=-61.8120 | val_elbo=-298.5991                          
+Epoch 095/100 | train_loss=62.2943 | val_loss=298.7046 | train_elbo=-62.2943 | val_elbo=-298.7046                          
+Epoch 096/100 | train_loss=63.0721 | val_loss=292.2567 | train_elbo=-63.0721 | val_elbo=-292.2567                          
+Epoch 097/100 | train_loss=62.3944 | val_loss=293.4137 | train_elbo=-62.3944 | val_elbo=-293.4137                          
+Epoch 098/100 | train_loss=60.1624 | val_loss=294.3682 | train_elbo=-60.1624 | val_elbo=-294.3682                          
+Epoch 099/100 | train_loss=59.6014 | val_loss=307.8483 | train_elbo=-59.6014 | val_elbo=-307.8483                          
+Epoch 100/100 | train_loss=60.0244 | val_loss=303.8524 | train_elbo=-60.0244 | val_elbo=-303.8524                          
+Best model saved to: partA_outputs/partA_vae.pt
+Training history saved to: partA_outputs/train_history.json
+Configuration saved to: partA_outputs/train_config.json
+[Part A] Training complete. History length: 100 epochs
+[Part A] Loading data and extracting latent means...
+[Part A] Saved latent arrays to: partA_outputs/latents.npz
+[Part A] Saved latent scatter plot to: partA_outputs/latent_scatter.png
+[Part A] Selecting latent pairs...
+[Part A] Saved selected pairs to: partA_outputs/selected_pairs.json
+[Part A] Computing pull-back geodesic candidates...
+[Part A] Saving final visualization...
+[Part A] Saved final figure to: partA_outputs/latent_scatter_with_curves.png
+[Part A] Saved run metadata to: partA_outputs/run_partA_config.json
+[Part A] Pipeline finished successfully.
