@@ -119,12 +119,14 @@ def load_partA_subset_dataloaders(
     Tries several likely Part A APIs before falling back to a raw subset builder.
     """
     candidates = [
+        "get_parta_data",
         "get_partA_dataloaders",
         "get_dataloaders",
         "make_dataloaders",
         "build_dataloaders",
         "load_dataloaders",
     ]
+
     for name in candidates:
         if hasattr(partA_data, name):
             result = _call_with_supported_kwargs(
@@ -136,31 +138,58 @@ def load_partA_subset_dataloaders(
                 num_observations=num_observations,
                 n_observations=num_observations,
                 subset_size=num_observations,
+                total_observations=num_observations,
                 seed=seed,
                 shuffle=True,
             )
+
+            # Case 1: dict-like API
             if isinstance(result, dict):
                 train_loader = result.get("train_loader") or result.get("loader") or result.get("train")
                 eval_loader = result.get("eval_loader") or result.get("test_loader") or result.get("eval") or train_loader
-                latent_loader = result.get("latent_loader") or eval_loader
+                latent_loader = result.get("latent_loader") or result.get("full_loader") or eval_loader
                 labels = result.get("labels", None)
+
                 if train_loader is None:
                     continue
+
                 if labels is None:
                     try:
-                        dataset = latent_loader.dataset
-                        _, y = _extract_xy_from_dataset(dataset)
+                        _, y = _extract_xy_from_dataset(latent_loader.dataset)
                         labels = y.numpy()
                     except Exception:
                         labels = None
-                num_points = len(latent_loader.dataset)
+
                 return {
                     "train_loader": train_loader,
                     "eval_loader": eval_loader,
                     "latent_loader": latent_loader,
                     "labels": labels,
-                    "num_points": num_points,
+                    "num_points": len(latent_loader.dataset),
                 }
+
+            # Case 2: PartADataBundle-style object
+            if hasattr(result, "train_loader") and hasattr(result, "full_loader"):
+                train_loader = result.train_loader
+                eval_loader = getattr(result, "val_loader", result.full_loader)
+                latent_loader = result.full_loader
+
+                labels = None
+                try:
+                    _, y = _extract_xy_from_dataset(latent_loader.dataset)
+                    labels = y.numpy()
+                except Exception:
+                    pass
+
+                return {
+                    "train_loader": train_loader,
+                    "eval_loader": eval_loader,
+                    "latent_loader": latent_loader,
+                    "labels": labels,
+                    "num_points": len(latent_loader.dataset),
+                }
+
+            # Case 3: tuple/list API
             if isinstance(result, (tuple, list)) and len(result) >= 2:
                 train_loader = result[0]
                 eval_loader = result[1]
@@ -171,6 +200,7 @@ def load_partA_subset_dataloaders(
                     labels = y.numpy()
                 except Exception:
                     pass
+
                 return {
                     "train_loader": train_loader,
                     "eval_loader": eval_loader,

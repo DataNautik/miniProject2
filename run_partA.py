@@ -52,7 +52,7 @@ LOAD_EXISTING_CHECKPOINT = False
 CHECKPOINT_PATH = RUN_PARTA_OUTPUT_DIR / "partA_vae.pt"
 
 SEED = 0
-DEVICE = "mps"
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 N_GEODESIC_PAIRS = 25
 GEODESIC_NODES = 20
 GEODESIC_LR = 0.5
